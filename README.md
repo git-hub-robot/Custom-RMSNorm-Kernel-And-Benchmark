@@ -18,7 +18,7 @@ A custom implementation of RMSNorm with both the forward and backward pass using
 
 ![Forward Benchmark](results/RMSNorm-forward.png)
 
-Performs significantly better than PyTorch-eager for large N (>= 5000) and within ~8% of torch.compile.
+Performs significantly better than PyTorch-eager for large N (>= 5000) and within ~6% of torch.compile.
 
 ## Backward Pass: 
 
