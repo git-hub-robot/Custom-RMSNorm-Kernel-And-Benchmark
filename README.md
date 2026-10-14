@@ -14,10 +14,14 @@ A custom implementation of RMSNorm with both the forward and backward pass using
 - M = 4096, N = 256 * {2, 3, ..., 32}
 - GB/s calculation assumes 2 passes on a MxN tensor for forward and 3 for backward, ignoring smaller traffic like writing to dw_buffers and rstd
 # Benchmark Results
-Forward Pass:
-![Forward benchmark](results/RMSNorm-forward.png)
+## Forward Pass: 
+
+![Forward Benchmark](results/RMSNorm-forward.png)
+
 Performs significantly better than PyTorch-eager for large N (>= 5000) and within ~8% of torch.compile.
 
-Backward Pass:
-![Backward benchmark](results/RMSNorm-backward.png)
+## Backward Pass: 
+
+![Backward Benchmark](results/RMSNorm-backward.png)
+
 Performs ~120% better than PyTorch-eager and ~60% better than torch.compile on large N (>= 5000).
